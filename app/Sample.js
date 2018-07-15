@@ -1,8 +1,8 @@
 var redux = require('redux');
-var defaultState = {
-	mang: ['android','ios','node'],
-	isAdding : false
-}
+// var defaultState = {
+// 	mang: ['android','ios','node'],
+// 	isAdding : false
+// }
 
 // var reducer = (state=defaultState, action) => {
 // 	switch (action.type)
@@ -39,7 +39,7 @@ var addingReducer = (state=false,action) => {
 	switch (action.type)
 	{
 		case 'TOGGLE_ADDING':
-			return !state.isAdding
+			return !state
 			break
 		default:
 			return state
@@ -48,24 +48,26 @@ var addingReducer = (state=false,action) => {
 
 var reducer = redux.combineReducers({
 	mang: mangReducer,
-	adding: addingReducer
+	showForm: addingReducer
 })
 
 var store = redux.createStore(reducer, redux.compose(
 	window.devToolsExtension?window.devToolsExtension(): f => f
 ))
-store.subscribe(()=>{
-	let str = store.getState()
-	document.getElementById('show-json').innerHTML = JSON.stringify(str)
-})
-store.dispatch({
-	type: 'TOGGLE_ADDING'
-})
-store.dispatch({
-	type: 'ADD_ITEM',
-	item:'react'
-})
-store.dispatch({
-	type: 'DEL_ITEM',
-	index:2
-})
+// store.subscribe(()=>{
+// 	let str = store.getState()
+// 	document.getElementById('show-json').innerHTML = JSON.stringify(str)
+// })
+// store.dispatch({
+// 	type: 'TOGGLE_ADDING'
+// })
+// store.dispatch({
+// 	type: 'ADD_ITEM',
+// 	item:'react'
+// })
+// store.dispatch({
+// 	type: 'DEL_ITEM',
+// 	index:2
+// })
+
+export default store;
