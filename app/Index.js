@@ -1,11 +1,21 @@
 import React, { Component } 	from "react"
 import {render}					from "react-dom"
-import Title					from "./components/Title"
+import List						from "./components/List"
 
 class Index extends Component
 {
+	constructor(props){
+		super(props)
+		this.state={
+			addNote:''
+		}
+
+	}
+	// componentDidMount(){
+	// 	$.post('smcta.vn',{id:1},()=>{},'json').fail(()=>{console.log('fails')})
+	// }
 	render(){
-		return (<Title />)
+		return <List/>
 	}
 }
 
@@ -14,4 +24,4 @@ render(
 	document.getElementById('root')
 )
 
-export default Index;
+require ('./Sample.js')
