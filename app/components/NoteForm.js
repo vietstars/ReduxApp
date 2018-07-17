@@ -1,18 +1,19 @@
 import React, { Component,Fragment } 		from "react"
 import {render}					from "react-dom"
 import {connect}				from "react-redux"
+import	{toggle, addItem}		from "action"
 
 class NoteForm extends Component
 {
 	toggleForm(){
 		let {dispatch} = this.props
-		dispatch({type:'TOGGLE_ADDING'})
+		dispatch(toggle())
 	}
 	getAdd(e){
 		//e.preventDefault()//same jquery
 		let {dispatch} = this.props
-		dispatch({type:'ADD_ITEM',item:this.refs.txt.value})
-		dispatch({type:'TOGGLE_ADDING'})
+		dispatch(addItem(this.refs.txt.value))
+		dispatch(toggle())
 	}
 	render(){
 		let _form

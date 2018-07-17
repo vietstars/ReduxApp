@@ -14,8 +14,9 @@ var config = {
 	},
 	resolve:{
 		alias:{
+			store: SRC_DIR + '/StoreConf.js',
+			action: SRC_DIR + '/Action.js',
 			reducer: SRC_DIR + '/reducers/reducer.js',
-			store: SRC_DIR + '/storeConf.js',
 			List: SRC_DIR + '/components/List.js',
 			Note: SRC_DIR + '/components/Note.js',
 			NoteForm: SRC_DIR + '/components/NoteForm.js'

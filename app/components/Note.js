@@ -1,12 +1,13 @@
 import React, { Component } 			from "react"
 import {render}					from "react-dom"
 import {connect}				from "react-redux"
+import {delItem}				from "action"
 
 class Note extends Component
 {
 	removeNote(){
 		let {index,dispatch} = this.props
-		dispatch({type:'DEL_ITEM',index})
+		dispatch(delItem(index))
 	}
 	render(){
 		return (
