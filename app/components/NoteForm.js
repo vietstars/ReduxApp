@@ -16,8 +16,8 @@ class NoteForm extends Component
 	}
 	render(){
 		let _form
-		let {showForm} = this.props
-		if(showForm){
+		let {adding} = this.props
+		if(adding){
 			_form = <Fragment><input type="text" ref="txt" placeholder="Enter note"/> <button onClick={this.getAdd.bind(this)}><i className="fa fa-send" /> Submit</button></Fragment>
 		}else{
 			_form = <Fragment><button onClick={this.toggleForm.bind(this)}><i className="fa fa-plus" /> Add</button></Fragment>
@@ -26,4 +26,4 @@ class NoteForm extends Component
 	}
 }
 
-export default connect((state)=>{return{showForm:state.showForm}})(NoteForm);
+export default connect((state)=>{return{adding:state.adding}})(NoteForm);

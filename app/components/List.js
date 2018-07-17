@@ -1,7 +1,7 @@
 import React, { Component,Fragment } 		from "react"
 import {render}					from "react-dom"
-import Note					from "./Note"
-import NoteForm					from "./NoteForm"
+import Note					from "Note"
+import NoteForm					from "NoteForm"
 import {connect}				from "react-redux"
 
 class List extends Component

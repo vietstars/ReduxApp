@@ -12,6 +12,15 @@ var config = {
 		filename: "bundle.js",
 		publicPath: "/"
 	},
+	resolve:{
+		alias:{
+			reducer: SRC_DIR + '/reducers/reducer.js',
+			store: SRC_DIR + '/storeConf.js',
+			List: SRC_DIR + '/components/List.js',
+			Note: SRC_DIR + '/components/Note.js',
+			NoteForm: SRC_DIR + '/components/NoteForm.js'
+		}
+	},
 	module: {
 		rules: [
 			{

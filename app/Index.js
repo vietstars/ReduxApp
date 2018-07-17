@@ -1,8 +1,8 @@
 import React, { Component } 			from "react"
 import {render}					from "react-dom"
-import List					from "./components/List"
+import List					from "List"
 import {Provider}				from "react-redux"
-import store					from "./sample"
+import store					from "store"
 
 class Index extends Component
 {
